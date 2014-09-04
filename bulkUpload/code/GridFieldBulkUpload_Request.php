@@ -296,7 +296,6 @@ class GridFieldBulkUpload_Request extends RequestHandler
 	protected function contentTypeNegotiation(&$response)
 	{
 		if (isset($_SERVER['HTTP_ACCEPT']) && ((strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) || $_SERVER['HTTP_ACCEPT'] === '*/*' )) {
-		{
 			$response->addHeader('Content-Type', 'application/json');
 		}else{
 			$response->addHeader('Content-Type', 'text/plain');
